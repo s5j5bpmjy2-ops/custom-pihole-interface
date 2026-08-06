@@ -117,7 +117,7 @@
 						<img src="img/icon.svg" class="img-circle" alt="Pi-hole logo">
 					</div>
 					<div class="pull-left info">
-						<p>Status</p>
+						<p><?php echo gethostname(); ?></p>
 						<?php
 						$pistatus = exec('pgrep dnsmasq | wc -l');
 						if ($pistatus > "0") {echo '<a href="#"><i class="fa fa-circle" style="color: #00a65a"></i> Active</a>';}
